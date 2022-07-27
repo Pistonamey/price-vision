@@ -13,32 +13,37 @@
 </head>
 
 <body >
-  <div class="container h-100">
- <div class="home col-md-6">
-	<h1 style="color:White;">Price Vision</h1>
+  <section class="vh-100">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="amey" class="col-sm-6 text-black">
+  
+          <div class="px-5 ms-xl-4">
+            <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+            <span class="h1 fw-bold mb-0">Real Estate Price Prediction</span><br>
 
      <!-- Action is where the data is sent. In our case, predict page.
      If action is omitted, it assumed to be the current page -->
     <form action="{{ url_for('predict')}}"method="post">
-      <div class="form-group">
-        <label for="house_age" class="text-white">House Age</label>
-        <input id="piston" class="form-control" type="text" name="a" placeholder="" required="required" /><br>
+      <div class="form-group mb-4">
+        <label for="house_age" class="text-black">House Age</label>
+        <input id="piston" class="form-control" type="text" name="a" placeholder="" required="required" />
       </div>
       <div class="form-group">
     	
-      <label for="transit_distance" class="text-white">Transit Distance</label>  
-      <input type="text" class="form-control" name="b" placeholder="" required="required" /><br>
+      <label for="transit_distance" class="text-black">Transit Distance</label>  
+      <input type="text" class="form-control form-control-lg" name="b" placeholder="" required="required" /><br>
     </div>
     <div class="form-group">
-      <label for="lcs" class="text-white">Convience Stores</label>  
+      <label for="lcs" class="text-black">Convience Stores</label>  
       <input type="text" class="form-control" name="c" placeholder="" required="required" /><br>
     </div>
     <div class="form-group">
-      <label for="latitude" class="text-white">Latitude</label>  
+      <label for="latitude" class="text-black">Latitude</label>  
       <input type="text" class="form-control" name="d" placeholder="" required="required" /><br>
     </div>
     <div class="form-group">
-      <label for="longitude" class="text-white">Longitude</label>  
+      <label for="longitude" class="text-black">Longitude</label>  
       <input type="text" class="form-control" name="e" placeholder="" required="required" /><br>
     </div>  
         <p>
@@ -47,13 +52,21 @@
       
       </form>
 
-   <br>
-   <br>
-   <h4 style="color:white">
-   {{ prediction_text }} </h4>
+    </div>
+    <h4 style="color:black">
+    {{ prediction_text }} </h4>
 
- </div>
+    </div>
+      
+  
+
+   <div class="col-sm-6 px-0 d-none d-sm-block">
+    <img src="{{url_for('static', filename='pricy.png')}}"
+      alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+  </div>
 </div>
+</div>
+</section>
 
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

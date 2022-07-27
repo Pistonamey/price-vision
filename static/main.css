@@ -3,11 +3,17 @@
 
 
 body{
-    background-color: #591877;
+    background-color: whitesmoke;
     clear: both;
     padding-bottom: 35px;
     margin: 0;
     height: 100%;
+}
+
+#amey{
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
@@ -15,3 +21,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    }
+
+    @media (min-width: 1025px) {
+        .h-custom-2 {
+        height: 100%;
+        }
+        }

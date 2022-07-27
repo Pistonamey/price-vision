@@ -21,7 +21,7 @@ def predict():
     features = [np.array(int_features)]
     prediction = model.predict(features)
     output = round(prediction[0], 2)
-    return render_template('index.html', prediction_text='Price per sq. meter : {}'.format(output))
+    return render_template('index.html', prediction_text='Price per sq. meter : ${}'.format(output))
 
 
 print(pickle.format_version)
